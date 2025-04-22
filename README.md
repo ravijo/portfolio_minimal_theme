@@ -1,7 +1,7 @@
 # portfolio_minimal_theme
 A responsive theme originally designed for Drupal 7, now upgraded for Drupal 10/11
 
-See [References](#references) for the original Drupal 7 theme.
+_See [References](#references) for the original Drupal 7 theme._
 
 
 ## Todo
@@ -14,10 +14,10 @@ See [References](#references) for the original Drupal 7 theme.
 - [ ] Improve code comments and add developer documentation inside `docs/` or within files.
 - [ ] Create a helper script to generate subtheme `*.info.yml` files.
 - [ ] Include screenshots and/or demo GIFs in the README to showcase theme features.
-- [ ] Remove system icons from the theme.
-- [ ] Declare wow.js, Font Awesome etc as dependency and remove from the theme.
-- [ ] Improve media.css to incoporate mobile first design strategy.
-- [ ] Remove old CSS classes and use new ones.
+- [ ] Remove system-specific icons from the theme to reduce clutter and improve maintainability.
+- [ ] Declare external libraries (e.g., `wow.js`, `Font Awesome`) as dependencies and remove bundled copies from the theme.
+- [ ] Refactor `media.css` to follow a mobile-first design approach, ensuring better responsiveness across devices.
+- [ ] Audit and clean up outdated CSS classes; replace them with modern, semantic, and utility-based classes where appropriate.
 
 
 ## References

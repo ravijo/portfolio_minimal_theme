@@ -1,0 +1,41 @@
+name: 'Portfolio Minimal Theme'
+type: theme
+description: 'A responsive theme originally designed for Drupal 7, now upgraded for Drupal 10/11.'
+base theme: false
+core_version_requirement: ^10 || ^11
+favicon: favicon.ico
+screenshot: screenshot.png
+
+libraries:
+  - portfolio_minimal_theme/global-styling
+  - portfolio_minimal_theme/global-scripts
+
+regions:
+  main_menu: 'Main menu'
+  aboutme: 'About me'
+  recent_news: 'Recent news'
+  myworks: 'My works'
+  keyskills: 'Key skills'
+  education: 'Education'
+  awards: 'Awards'
+  resume: 'Resume'
+  contact: 'Contact'
+  sidebar_first: 'First Sidebar'
+  sidebar_second: 'Second Sidebar'
+  content: 'Content'
+  breadcrumb: 'Breadcrumb'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+features:
+  - logo
+  - name
+  - slogan
+  - node_user_picture
+  - comment_user_picture
+  - comment_user_verification
+  - favicon
+  - main_menu
+  - secondary_menu
+
+version: '1.0'

@@ -1,0 +1,77 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+{# Start siteheader #}
+<header class="siteheader" role="banner">
+  <div class="minimal bounce">
+    {% if logo %}
+      <div id="logo">
+        <a href="{{ front_page }}" title="{{ 'Home'|t }}"><img alt="Passport size picture of {{ site_name }}" src="{{ logo }}" /></a>
+      </div>
+    {% endif %}
+
+    <h1 id="site-title">
+      <a href="{{ front_page }}" title="{{ 'Home'|t }}">{{ site_name }}</a>
+      {% if site_slogan %}
+        <div id="site-description">{{ site_slogan }}</div>
+      {% endif %}
+    </h1>
+  </div>
+</header>
+{# End siteheader #}
+
+{# Start content-wrap #}
+<div class="content-wrap">
+  {# Start main #}
+  <main role="main">
+    <a id="main-content" tabindex="-1">{# link is in html.html.twig #}</a>
+
+    {# Start sidebar_first #}
+    {% if page.sidebar_first %}
+      <aside id="sidebar-first" role="complementary">{{ page.sidebar_first }}</aside>
+    {% endif %}
+    {# End sidebar_first #}
+
+    {# Start front-blocks #}
+    <div class="front-blocks maintenance-block">
+      {% if title %}
+        <h2 class="page-title">{{ title }}</h2>
+      {% endif %}
+
+      {{ page.highlighted }}
+      {{ page.content }}
+    </div>
+    {# End front-blocks #}
+
+    {# Start sidebar_second #}
+    {% if page.sidebar_second %}
+      <aside id="sidebar-second" role="complementary">{{ page.sidebar_second }}</aside>
+    {% endif %}
+    {# End sidebar_second #}
+  </main>
+  {# End main #}
+</div>
+{# End content-wrap #}
+
+{# Start footer #}
+<div id="footer">
+  <div class="footer_credit">
+    <div id="copyright">
+      <div class="copyright">{{ 'Copyright'|t }}
+        &copy;
+        {{ 'now'|date('Y') }},
+        {{ site_name }}</div>
+      <div class="credits">{{ 'Website designed and developed by '|t }}
+        {{ site_name }}</div>
+    </div>
+  </div>
+</div>
+{# End footer #}

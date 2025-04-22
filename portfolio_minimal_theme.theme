@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\search\SearchPageInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function portfolio_minimal_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['portfolio_minimal_theme_info'] = [
+    '#markup' => '<h2><br/>Advanced Theme Settings</h2><div class="messages messages--warning">Clear cache after making any changes in theme settings. <a href="../../config/development/performance">Click here to clear cache</a></div>',
+  ];
+
+  $form['portfolio_minimal_theme_settings']['breadcrumbs'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Show breadcrumbs in a page'),
+    '#default_value' => theme_get_setting('breadcrumbs'),
+    '#description' => t('Check this option to show breadcrumbs in the page. Uncheck to hide.'),
+  ];
+
+  $form['portfolio_minimal_theme_settings']['social_links'] = [
+    '#type' => 'details',
+    '#title' => t('Social Media Link'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  ];
+
+  $form['portfolio_minimal_theme_settings']['social_links']['show_social_link'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Show Social Media Links'),
+    '#default_value' => theme_get_setting('social_links'),
+    '#description'   => t("Show/Hide Social media links"),
+  ];
+
+  $social_fields = [
+    'rss_url' => t('RSS'),
+    'github_url' => t('GitHub'),
+    'twitter_url' => t('Twitter'),
+    'facebook_url' => t('Facebook'),
+    'google_plus_url' => t('Google+'),
+    'linkedin_url' => t('LinkedIn'),
+    'pinterest_url' => t('Pinterest'),
+    'youtube_url' => t('YouTube'),
+  ];
+
+  foreach ($social_fields as $key => $label) {
+    $form['portfolio_minimal_theme_settings']['social_links'][$key] = [
+      '#type' => 'textfield',
+      '#title' => t('@label URL', ['@label' => $label]),
+      '#default_value' => theme_get_setting($key),
+      '#description' => t('Enter your @label profile URL.', ['@label' => $label]),
+    ];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function portfolio_minimal_theme_preprocess_page(&$variables) {
+  // Social media global variables.
+  $variables['social_links'] = theme_get_setting('social_links');
+  $variables['rss_url'] = theme_get_setting('rss_url');
+  $variables['github_url'] = theme_get_setting('github_url');
+  $variables['twitter_url'] = theme_get_setting('twitter_url');
+  $variables['facebook_url'] = theme_get_setting('facebook_url');
+  $variables['google_plus_url'] = theme_get_setting('google_plus_url');
+  $variables['linkedin_url'] = theme_get_setting('linkedin_url');
+  $variables['pinterest_url'] = theme_get_setting('pinterest_url');
+  $variables['youtube_url'] = theme_get_setting('youtube_url');
+
+  // Website specific variables.
+  $site_config = \Drupal::config('system.site');
+  $variables['site_name'] = $site_config->get('name');
+  $variables['site_slogan'] = $site_config->get('slogan');
+
+  // Get logo of the website.
+  $config = \Drupal::config('portfolio_minimal_theme.settings');
+  $logo_path = $config->get('logo.use_default') ? theme_get_setting('logo.path') : $config->get('logo.path');
+  $variables['logo'] = \Drupal::service('file_url_generator')->generateAbsoluteString($logo_path);
+}
+
+/**
+ * Implements hook_preprocess_breadcrumb().
+ */
+function portfolio_minimal_theme_preprocess_breadcrumb(&$variables) {
+  // Add the current page title at the end of the breadcrumb.
+  // We are creating a variable for the Current Page Title, to allow us to print
+  // it after the breadcrumbs loop has run.
+  $route_match = \Drupal::routeMatch();
+  // Search page titles aren't resolved using the title_resolver service - it
+  // will always return 'Search' instead of 'Search for [term]', which would
+  // give us a breadcrumb of Home >> Search >> Search.
+  // @todo Revisit after https://www.drupal.org/project/drupal/issues/2359901
+  // @todo Revisit after https://www.drupal.org/project/drupal/issues/2403359
+  $entity = $route_match->getParameter('entity');
+  $current_page_title = $entity instanceof SearchPageInterface ? $entity->getPlugin()->suggestedTitle() : \Drupal::service('title_resolver')->getTitle(\Drupal::request(), $route_match->getRouteObject());
+
+  $variables['breadcrumb'][] = [
+    'text' => $current_page_title,
+    'url' => '',
+  ];
+
+  // Since we are printing the 'Current Page Title', add the URL cache context.
+  // If we don't, then we might end up with something like
+  // "Home > Articles" on the Recipes page, which should read "Home > Recipes".
+  $variables['#cache']['contexts'][] = 'url';
+}

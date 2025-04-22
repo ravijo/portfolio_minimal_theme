@@ -1,0 +1,24 @@
+global-styling:
+  version: 1.0
+  css:
+    theme:
+      css/animate.css: {}
+      css/font-awesome.css: {}
+      css/style.css: {}
+      css/media.css: {}
+  dependencies:
+    - core/drupal
+
+global-scripts:
+  version: 1.0
+  js:
+    js/wow.min.js: {}
+    js/custom.js: { dependencies: ['portfolio_minimal_theme/wow-js'] }
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+wow-js:
+  version: 1.0.2
+  js:
+    js/wow.min.js: {}

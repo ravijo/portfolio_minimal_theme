@@ -1,0 +1,158 @@
+/* Large screens */
+@media screen and (max-width: 1152px) {
+  #main-menu ul {
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .toplayer {
+    all: unset;
+  }
+
+  body {
+    background: #000;
+    margin: 15px;
+  }
+
+  .front-blocks {
+    background: #fff;
+  }
+}
+
+/* Medium screens */
+@media screen and (max-width: 960px) {
+  body {
+    line-height: 150%;
+    font-size: 15px;
+  }
+
+  header.siteheader {
+    box-shadow: none;
+  }
+
+  .front-blocks > .region {
+    padding: 10px;
+  }
+
+  .front-blocks > .region > .block {
+    font-size: 15px;
+  }
+
+  .content-wrap {
+    padding-top: 10px;
+  }
+}
+
+/* Small screens */
+@media screen and (max-width: 640px) {
+  /* Text and spacing adjustments */
+  body {
+    font-size: 14px;
+  }
+
+  .node {
+    margin: 10px 0;
+  }
+
+  /* Header adjustments */
+  header.siteheader {
+    padding: 80px 0;
+  }
+
+  #logo img,
+  .region-aboutme img {
+    max-width: 75%;
+  }
+
+  h1#site-title a {
+    font-size: 28px;
+    margin: 8px 0;
+  }
+
+  #site-description {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  /* Table and content blocks */
+  td,
+  .publications,
+  .project-list,
+  .award-list {
+    font-size: 70%;
+  }
+
+  td {
+    padding: 0;
+  }
+
+  /* Front page blocks */
+  .front-blocks > .region > .block {
+    margin: 10px auto;
+  }
+
+  .frontuniqueblocks2 > .block {
+    padding: 10px;
+  }
+
+  /* Layout adjustments */
+  .portfolio-list {
+    width: 100%;
+  }
+
+  /* Flexbox to column layout */
+  .project-list,
+  .award-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-item,
+  .award-item {
+    width: 100%;
+  }
+
+  /* Social media */
+  .social-icons li a {
+    width: 30px;
+    padding: 5px 8px;
+    font-size: 15px;
+    height: 30px;
+  }
+
+  .social-media-wrap {
+    margin: 20px 0;
+  }
+
+  #copyright > div {
+    margin: 10px 0;
+  }
+
+  /* Content containers */
+  article,
+  .not-front .node-page,
+  .not-front.node-type-blog .node-blog,
+  .not-front.node-type-article .node-article {
+    padding: 10px;
+  }
+
+  /* Publications */
+  .menu-publications {
+    padding-right: 5%;
+  }
+
+  /* Front blocks */
+  .frontblockwrap > .region {
+    padding: 10px;
+  }
+
+  .frontblockwrap > .region > .block {
+    margin: 30px auto;
+  }
+
+  /* News */
+  .recent-news-home .wrapper-class ul {
+    margin-left: 0;
+  }
+}

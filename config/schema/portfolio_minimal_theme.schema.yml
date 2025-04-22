@@ -1,0 +1,31 @@
+portfolio_minimal_theme.settings:
+  type: config_object
+  label: 'Portfolio Minimal Theme settings'
+  mapping:
+    breadcrumbs:
+      type: boolean
+      label: 'Show breadcrumbs'
+    social_links:
+      type: boolean
+      label: 'Show social links in header'
+    github_url:
+      type: string
+      label: 'GitHub Profile URL'
+    twitter_url:
+      type: string
+      label: 'Twitter Profile URL'
+    facebook_url:
+      type: string
+      label: 'Facebook Profile URL'
+    google_plus_url:
+      type: string
+      label: 'Google+ Profile URL'
+    linkedin_url:
+      type: string
+      label: 'LinkedIn Profile URL'
+    pinterest_url:
+      type: string
+      label: 'Pinterest Profile URL'
+    youtube_url:
+      type: string
+      label: 'YouTube Profile URL'

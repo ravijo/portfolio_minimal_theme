@@ -2,12 +2,12 @@ global-styling:
   version: 1.0
   css:
     theme:
-      css/animate.css: {}
       css/font-awesome.css: {}
       css/style.css: {}
       css/media.css: {}
   dependencies:
     - core/drupal
+    - portfolio_minimal_theme/animate
 
 global-scripts:
   version: 1.0
@@ -22,3 +22,11 @@ wow-js:
   version: 1.0.2
   js:
     js/wow.min.js: {}
+
+animate:
+  version: 4.1.1
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css:
+        type: external
+        minified: true

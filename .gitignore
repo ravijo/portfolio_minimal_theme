@@ -61,5 +61,8 @@
 /drupal.phar
 /drupal
 
-# Ignore it
+# Ignore the picture.jpg file
 /picture.jpg
+
+# Ignore .vscode settings folder
+.vscode/

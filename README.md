@@ -9,7 +9,7 @@ _See [References](#references) for the original Drupal 7 theme._
 - [x] Remove bundled font-awesome.css and use CDN/Composer
 - [x] Remove bundled wow.min.js and use CDN version
 - [x] Remove Font Awesome font files from theme
-- [ ] Fix insecure HTTP Google Fonts import (change to HTTPS)
+- [x] Fix insecure HTTP Google Fonts import (change to HTTPS)
 - [ ] Test Twig 3 compatibility
 - [ ] Test Symfony 6+ compatibility
 - [ ] Sanitize all Twig output properly

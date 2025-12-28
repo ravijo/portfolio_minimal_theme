@@ -10,16 +10,16 @@ _See [References](#references) for the original Drupal 7 theme._
 - [x] Remove bundled wow.min.js and use CDN version
 - [x] Remove Font Awesome font files from theme
 - [x] Fix insecure HTTP Google Fonts import (change to HTTPS)
-- [ ] Test Twig 3 compatibility
-- [ ] Test Symfony 6+ compatibility
-- [ ] Sanitize all Twig output properly
 - [ ] Replace outdated CSS reset with modern version
-- [ ] Remove all vendor prefixes and add autoprefixer to build process
 - [ ] Convert desktop-first to mobile-first media queries in media.css
 - [ ] Replace float-based layouts with CSS Grid
 - [ ] Add CSS custom properties for colors and spacing
 - [ ] Remove fixed positioning from navigation (use sticky)
 - [ ] Remove deprecated features from .info.yml
+- [ ] Test Twig 3 compatibility
+- [ ] Test Symfony 6+ compatibility
+- [ ] Sanitize all Twig output properly
+- [ ] Remove all vendor prefixes and add autoprefixer to build process
 - [ ] Add semantic HTML5 tags throughout templates
 - [ ] Add skip-to-content links
 - [ ] Implement keyboard navigation support

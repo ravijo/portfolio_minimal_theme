@@ -5,19 +5,60 @@ _See [References](#references) for the original Drupal 7 theme._
 
 
 ## Todo
-- [ ] Test and ensure full compatibility with Drupal 11 core changes (e.g., Symfony updates, Twig 3 support).
-- [ ] Add theme settings form to allow users to toggle layout options, upload logos, etc.
-- [ ] Provide Twig template suggestions for nodes, views, and blocks (e.g., `node--portfolio--teaser.html.twig`).
-- [ ] Improve accessibility (a11y): semantic HTML5 tags, keyboard navigation, skip links, color contrast checks.
-- [ ] Include starter/demo content package to showcase theme layout and styles.
-- [ ] Add support for Drupal’s `starterkit` system for easier subtheme generation.
-- [ ] Improve code comments and add developer documentation inside `docs/` or within files.
-- [ ] Create a helper script to generate subtheme `*.info.yml` files.
-- [ ] Include screenshots and/or demo GIFs in the README to showcase theme features.
-- [ ] Remove system-specific icons from the theme to reduce clutter and improve maintainability.
-- [ ] Declare external libraries (e.g., `wow.js`, `Font Awesome`) as dependencies and remove bundled copies from the theme.
-- [ ] Refactor `media.css` to follow a mobile-first design approach, ensuring better responsiveness across devices.
-- [ ] Audit and clean up outdated CSS classes; replace them with modern, semantic, and utility-based classes where appropriate.
+- [x] Remove bundled animate.css and use CDN version
+- [ ] Remove bundled font-awesome.css and use CDN/Composer
+- [ ] Remove bundled wow.min.js and use CDN version
+- [ ] Remove Font Awesome font files from theme
+- [ ] Fix insecure HTTP Google Fonts import (change to HTTPS)
+- [ ] Test Twig 3 compatibility
+- [ ] Test Symfony 6+ compatibility
+- [ ] Sanitize all Twig output properly
+- [ ] Replace outdated CSS reset with modern version
+- [ ] Remove all vendor prefixes and add autoprefixer to build process
+- [ ] Convert desktop-first to mobile-first media queries in media.css
+- [ ] Replace float-based layouts with CSS Grid
+- [ ] Add CSS custom properties for colors and spacing
+- [ ] Remove fixed positioning from navigation (use sticky)
+- [ ] Remove deprecated features from .info.yml
+- [ ] Add semantic HTML5 tags throughout templates
+- [ ] Add skip-to-content links
+- [ ] Implement keyboard navigation support
+- [ ] Fix color contrast ratios (WCAG 2.1 AA)
+- [ ] Create Twig template suggestions for nodes/views/blocks
+- [ ] Minify CSS/JS for production
+- [ ] Add defer/async attributes to JavaScript
+- [ ] Create theme settings form
+- [ ] Run phpcs with Drupal coding standards
+- [ ] Test cross-browser compatibility
+- [ ] Test mobile responsiveness
+- [ ] Run accessibility audit (axe/WAVE)
+- [ ] Update FA4 to FA6 class names in templates
+- [ ] Create helper script for subtheme generation
+- [ ] Create starter/demo content package
+- [ ] Add fallback URLs for CDN resources
+- [ ] Replace image-based UI elements with CSS
+- [ ] Rename non-semantic classes to BEM naming convention
+- [ ] Remove unused CSS (file icons if not needed)
+- [ ] Create utility class system
+- [ ] Replace fixed pixel widths with relative units and clamp()
+- [ ] Replace table-based display hacks with flexbox
+- [ ] Update library definitions to use VERSION token
+- [ ] Add aria-labels to navigation and interactive elements
+- [ ] Add prefers-reduced-motion support
+- [ ] Add theme preprocess functions
+- [ ] Implement lazy loading for images
+- [ ] Add preconnect hints for external resources
+- [ ] Add logo upload functionality
+- [ ] Add layout toggle options
+- [ ] Add code comments throughout CSS/JS
+- [ ] Create developer documentation in docs/ folder
+- [ ] Add screenshots/GIFs to README
+- [ ] Add starterkit support
+- [ ] Add PHPDoc comments to functions
+- [ ] Reorganize CSS into modular files (base/layout/components)
+- [ ] Update libraries.yml with proper license information
+- [ ] Consider replacing WOW.js with Intersection Observer
+- [ ] Update Animate.css class names if used
 
 
 ## References

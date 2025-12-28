@@ -2,12 +2,12 @@ global-styling:
   version: 1.0
   css:
     theme:
-      css/font-awesome.css: {}
       css/style.css: {}
       css/media.css: {}
   dependencies:
     - core/drupal
     - portfolio_minimal_theme/animate
+    - portfolio_minimal_theme/font-awesome
 
 global-scripts:
   version: 1.0
@@ -28,5 +28,13 @@ animate:
   css:
     theme:
       https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css:
+        type: external
+        minified: true
+
+font-awesome:
+  version: 7.0.1
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css:
         type: external
         minified: true

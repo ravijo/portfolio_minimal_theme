@@ -7,7 +7,7 @@ _See [References](#references) for the original Drupal 7 theme._
 ## Todo
 - [x] Remove bundled animate.css and use CDN version
 - [x] Remove bundled font-awesome.css and use CDN/Composer
-- [ ] Remove bundled wow.min.js and use CDN version
+- [x] Remove bundled wow.min.js and use CDN version
 - [ ] Remove Font Awesome font files from theme
 - [ ] Fix insecure HTTP Google Fonts import (change to HTTPS)
 - [ ] Test Twig 3 compatibility

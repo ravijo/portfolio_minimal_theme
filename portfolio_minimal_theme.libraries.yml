@@ -12,16 +12,22 @@ global-styling:
 global-scripts:
   version: 1.0
   js:
-    js/wow.min.js: {}
-    js/custom.js: { dependencies: ['portfolio_minimal_theme/wow-js'] }
+    js/custom.js:
+      attributes:
+        defer: true
   dependencies:
     - core/jquery
     - core/drupal
+    - portfolio_minimal_theme/wow-js
 
 wow-js:
-  version: 1.0.2
+  version: 1.1.2
   js:
-    js/wow.min.js: {}
+    https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js:
+      type: external
+      minified: true
+      attributes:
+        defer: true
 
 animate:
   version: 4.1.1

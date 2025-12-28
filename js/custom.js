@@ -35,8 +35,6 @@
       $('.region-contact .block > div', context).addClass('animate__bounceInUp');
       $('#post-content .block, #post-content .content > div', context).addClass('minimal animate__bounceInDown');
 
-
-
       // Initialize WOW.js (Only once to prevent re-initialization)
       if (typeof WOW !== 'undefined') {
         new WOW({

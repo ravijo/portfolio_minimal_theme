@@ -63,7 +63,7 @@
 
 {# Start siteheader #}
 <header class="siteheader" role="banner">
-  <div class="minimal bounce">
+  <div class="minimal animate__bounce">
     {% if logo %}
       <div id="logo">
         <a href="{{ front_page }}" title="{{ 'Home'|t }}"><img alt="Passport size picture of {{ site_name }}" src="{{ logo }}" /></a>
@@ -87,9 +87,9 @@
     <div class="frontblockwrap">{{ page.aboutme }}</div>
     {{ page.recent_news }}
     <div class="frontblockwrap">{{ page.myworks }}</div>
-    <div class="frontblockwrap minimal bounceInUp">{{ page.keyskills }}</div>
+    <div class="frontblockwrap minimal animate__bounceInUp">{{ page.keyskills }}</div>
     <div class="frontblockwrap">{{ page.education }}</div>
-    <div class="frontblockwrap minimal bounceInDown">{{ page.awards }}</div>
+    <div class="frontblockwrap minimal animate__bounceInDown">{{ page.awards }}</div>
   {% endif %}
 </div>
 {# End front-blocks #}
@@ -158,7 +158,7 @@
 {# Start front-blocks #}
 <div class="front-blocks">
   {% if is_front %}
-    <div class="frontblockwrap minimal bounceInUp">{{ page.resume }}</div>
+    <div class="frontblockwrap minimal animate__bounceInUp">{{ page.resume }}</div>
     <div class="frontblockwrap">{{ page.contact }}</div>
   {% endif %}
 </div>

@@ -10,7 +10,7 @@ _See [References](#references) for the original Drupal 7 theme._
 - [x] Remove bundled wow.min.js and use CDN version
 - [x] Remove Font Awesome font files from theme
 - [x] Fix insecure HTTP Google Fonts import (change to HTTPS)
-- [ ] Replace outdated CSS reset with modern version
+- [x] Replace outdated CSS reset with modern version
 - [ ] Convert desktop-first to mobile-first media queries in media.css
 - [ ] Replace float-based layouts with CSS Grid
 - [ ] Add CSS custom properties for colors and spacing

@@ -1,5 +1,5 @@
 global-styling:
-  version: 1.0
+  version: VERSION
   css:
     theme:
       css/style.css: {}
@@ -10,7 +10,7 @@ global-styling:
     - portfolio_minimal_theme/font-awesome
 
 global-scripts:
-  version: 1.0
+  version: VERSION
   js:
     js/custom.js:
       attributes:

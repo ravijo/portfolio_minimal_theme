@@ -19,24 +19,15 @@ _See [References](#references) for the original Drupal 7 theme._
 - [x] Update library definitions to use VERSION token
 - [ ] Remove deprecated features from .info.yml
 - [ ] Add preconnect hints for external resources
-- [ ] Update libraries.yml with proper license information
-- [ ] Add fallback URLs for CDN resources
 - [ ] Add CSS custom properties for colors and spacing
 - [ ] Remove all vendor prefixes and add autoprefixer to build process
 - [ ] Replace fixed pixel widths with relative units and clamp()
 - [ ] Add prefers-reduced-motion support
 - [ ] Remove unused CSS (file icons if not needed)
-- [ ] Add code comments throughout CSS/JS
-- [ ] Add PHPDoc comments to functions
-- [ ] Replace image-based UI elements with CSS
 
 ### MEDIUM (1-2 hours each)
-- [ ] Create utility class system
-- [ ] Add aria-labels to navigation and interactive elements
-- [ ] Minify CSS/JS for production
 - [ ] Test mobile responsiveness
 - [ ] Test cross-browser compatibility
-- [ ] Implement lazy loading for images
 - [ ] Remove fixed positioning from navigation (use sticky)
 
 ### HARD (2-4 hours each)
@@ -45,11 +36,7 @@ _See [References](#references) for the original Drupal 7 theme._
 - [ ] Rename non-semantic classes to BEM naming convention
 - [ ] Replace table-based display hacks with flexbox
 - [ ] Add skip-to-content links
-- [ ] Implement keyboard navigation support
-- [ ] Fix color contrast ratios (WCAG 2.1 AA)
 - [ ] Add semantic HTML5 tags throughout templates
-- [ ] Create Twig template suggestions for nodes/views/blocks
-- [ ] Add theme preprocess functions
 - [ ] Reorganize CSS into modular files (base/layout/components)
 
 ### VERY HARD (Full day+)
@@ -59,13 +46,6 @@ _See [References](#references) for the original Drupal 7 theme._
 - [ ] Test Twig 3 compatibility
 - [ ] Test Symfony 6+ compatibility
 - [ ] Sanitize all Twig output properly
-- [ ] Run phpcs with Drupal coding standards
-- [ ] Run accessibility audit (axe/WAVE)
-- [ ] Create helper script for subtheme generation
-- [ ] Create starter/demo content package
-- [ ] Add starterkit support
-- [ ] Create developer documentation in docs/ folder
-- [ ] Consider replacing WOW.js with Intersection Observer
 
 
 ## References

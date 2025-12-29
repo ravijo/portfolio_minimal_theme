@@ -17,7 +17,7 @@ _See [References](#references) for the original Drupal 7 theme._
 - [x] Update Animate.css class names if used
 - [x] Add screenshots/GIFs to README
 - [x] Update library definitions to use VERSION token
-- [ ] Remove deprecated features from .info.yml
+- [x] Remove deprecated features from .info.yml
 - [ ] Add preconnect hints for external resources
 - [ ] Add CSS custom properties for colors and spacing
 - [ ] Remove all vendor prefixes and add autoprefixer to build process

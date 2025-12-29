@@ -26,13 +26,13 @@ _See [References](#references) for the original Drupal 7 theme._
 - [ ] Fix color contrast ratios (WCAG 2.1 AA)
 - [ ] Create Twig template suggestions for nodes/views/blocks
 - [ ] Minify CSS/JS for production
-- [ ] Add defer/async attributes to JavaScript
+- [x] Add defer/async attributes to JavaScript
 - [ ] Create theme settings form
 - [ ] Run phpcs with Drupal coding standards
 - [ ] Test cross-browser compatibility
 - [ ] Test mobile responsiveness
 - [ ] Run accessibility audit (axe/WAVE)
-- [ ] Update FA4 to FA6 class names in templates
+- [x] Update FA4 to FA6 class names in templates
 - [ ] Create helper script for subtheme generation
 - [ ] Create starter/demo content package
 - [ ] Add fallback URLs for CDN resources

@@ -16,7 +16,7 @@ _See [References](#references) for the original Drupal 7 theme._
 - [x] Update FA4 to FA6 class names in templates
 - [x] Update Animate.css class names if used
 - [x] Add screenshots/GIFs to README
-- [ ] Update library definitions to use VERSION token
+- [x] Update library definitions to use VERSION token
 - [ ] Remove deprecated features from .info.yml
 - [ ] Add preconnect hints for external resources
 - [ ] Update libraries.yml with proper license information

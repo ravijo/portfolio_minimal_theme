@@ -19,33 +19,19 @@ _See [References](#references) for the original Drupal 7 theme._
 - [x] Update library definitions to use VERSION token
 - [x] Remove deprecated features from .info.yml
 - [x] Add preconnect hints for external resources
-- [ ] Add CSS custom properties for colors and spacing
-- [ ] Remove all vendor prefixes and add autoprefixer to build process
+- [x] Add CSS custom properties for colors and spacing
+- [x] Remove all vendor prefixes and add autoprefixer to build process
+- [x] Remove unused CSS (file icons if not needed)
 - [ ] Replace fixed pixel widths with relative units and clamp()
 - [ ] Add prefers-reduced-motion support
-- [ ] Remove unused CSS (file icons if not needed)
 
 ### MEDIUM (1-2 hours each)
-- [ ] Test mobile responsiveness
-- [ ] Test cross-browser compatibility
 - [ ] Remove fixed positioning from navigation (use sticky)
 
 ### HARD (2-4 hours each)
-- [ ] Convert desktop-first to mobile-first media queries in media.css
-- [ ] Replace float-based layouts with CSS Grid
-- [ ] Rename non-semantic classes to BEM naming convention
-- [ ] Replace table-based display hacks with flexbox
-- [ ] Add skip-to-content links
+- [x] Convert desktop-first to mobile-first media queries in media.css
 - [ ] Add semantic HTML5 tags throughout templates
 - [ ] Reorganize CSS into modular files (base/layout/components)
-
-### VERY HARD (Full day+)
-- [ ] Create theme settings form
-- [ ] Add logo upload functionality
-- [ ] Add layout toggle options
-- [ ] Test Twig 3 compatibility
-- [ ] Test Symfony 6+ compatibility
-- [ ] Sanitize all Twig output properly
 
 
 ## References

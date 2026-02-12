@@ -97,12 +97,11 @@ td {
   width: 100%;
 }
 
-/* Social media */
+/* Social media - mobile sizing */
 .social-icons li a {
   width: 30px;
-  padding: 5px 8px;
-  font-size: 15px;
   height: 30px;
+  font-size: 15px;
 }
 
 .social-media-wrap {
@@ -139,6 +138,25 @@ article,
 /* News */
 .recent-news-home .wrapper-class ul {
   margin-left: 0;
+}
+
+/* Form fixes for mobile - prevent inputs from extending beyond viewport */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure content area has minimum height to prevent footer shrinkage */
+.content-wrap {
+  min-height: 400px;
 }
 
 /* ==========================================================================
@@ -186,6 +204,7 @@ article,
 
   .content-wrap {
     padding-top: 10px;
+    min-height: 500px;  /* Increase min-height for larger screens */
   }
 
   /* Reset mobile styles back to desktop defaults */
@@ -223,18 +242,18 @@ article,
     width: auto;
   }
 
+  /* Social media - reset to desktop sizing */
   .social-icons li a {
     width: 55px;
-    padding: 15px 7px;
-    font-size: 27px;
     height: 55px;
+    font-size: 27px;
   }
 
   .social-media-wrap {
     margin: 50px 0;
   }
 
-  /* Reset #copyright > div margin back to style.css default (20px or var(--space-xl)) */
+  /* Reset #copyright > div margin back to style.css default */
   #copyright > div {
     margin: var(--space-xl) 0;
   }
@@ -261,6 +280,18 @@ article,
   .recent-news-home .wrapper-class ul {
     margin-left: 25px;
   }
+
+  /* Reset form inputs to auto width for desktop */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  textarea,
+  select {
+    width: auto;
+  }
 }
 
 /* ==========================================================================
@@ -284,6 +315,7 @@ article,
 
   .content-wrap {
     padding-top: var(--space-xl);
+    min-height: 600px;  /* Further increase for desktop */
   }
 }
 

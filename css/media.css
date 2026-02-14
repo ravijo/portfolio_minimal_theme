@@ -1,16 +1,13 @@
-/* ==========================================================================
+/*
    Mobile-First Media Queries
    Breakpoints:
    - Base: Mobile (< 768px)
    - Tablet: >= 768px
    - Desktop: >= 992px
    - Large Desktop: >= 1200px
-   ========================================================================== */
+*/
 
-/* ==========================================================================
-   Base Styles (Mobile - < 768px)
-   ========================================================================== */
-
+/* Base Styles (Mobile - < 768px) */
 /* Black background and margin - applied to all sizes up to 1199px */
 body {
   background: var(--color-bg-dark);
@@ -125,9 +122,7 @@ select {
   min-height: var(--content-min-height, 400px);
 }
 
-/* ==========================================================================
-   Tablet and Above (>= 768px)
-   ========================================================================== */
+/* Tablet and Above (>= 768px) */
 @media screen and (min-width: 768px) {
   :root {
     --header-padding: 150px;
@@ -237,9 +232,7 @@ select {
   }
 }
 
-/* ==========================================================================
-   Desktop (>= 992px)
-   ========================================================================== */
+/* Desktop (>= 992px) */
 @media screen and (min-width: 992px) {
   :root {
     --content-min-height: 600px;
@@ -262,9 +255,7 @@ select {
   }
 }
 
-/* ==========================================================================
-   Large Desktop (>= 1200px)
-   ========================================================================== */
+/* Large Desktop (>= 1200px) */
 @media screen and (min-width: 1200px) {
   body {
     background: var(--color-bg);

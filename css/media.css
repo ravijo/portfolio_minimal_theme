@@ -1,19 +1,19 @@
 /* ==========================================================================
    Mobile-First Media Queries
    Breakpoints:
-   - Base: Mobile (< 641px) - includes black background
-   - Tablet: >= 641px - maintains black background
-   - Desktop: >= 961px - maintains black background
-   - Large Desktop: >= 1153px - removes black background (back to white)
+   - Base: Mobile (< 768px) - includes black background
+   - Tablet: >= 768px - maintains black background
+   - Desktop: >= 992px - maintains black background
+   - Large Desktop: >= 1200px - removes black background (back to white)
    ========================================================================== */
 
 /* ==========================================================================
-   Base Styles (Mobile - < 641px)
+   Base Styles (Mobile - < 768px)
    These styles apply to mobile devices and override style.css defaults
    Includes the black background that should be on mobile/tablet/desktop
    ========================================================================== */
 
-/* Black background and margin - applied to all sizes up to 1152px */
+/* Black background and margin - applied to all sizes up to 1199px */
 body {
   background: var(--color-bg-dark);
   margin: 15px;
@@ -160,10 +160,10 @@ select {
 }
 
 /* ==========================================================================
-   Tablet and Above (>= 641px)
+   Tablet and Above (>= 768px)
    Reset mobile-specific overrides while keeping black background
    ========================================================================== */
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 768px) {
   /* Reset body font size and line-height from mobile */
   body {
     line-height: 150%;
@@ -295,10 +295,10 @@ select {
 }
 
 /* ==========================================================================
-   Desktop (>= 961px)
+   Desktop (>= 992px)
    Add desktop-specific styles while keeping black background
    ========================================================================== */
-@media screen and (min-width: 961px) {
+@media screen and (min-width: 992px) {
   /* Restore header box-shadow for desktop */
   header.siteheader {
     box-shadow: 0 6px 0 #E4E4E4;
@@ -320,10 +320,10 @@ select {
 }
 
 /* ==========================================================================
-   Large Desktop (>= 1153px)
+   Large Desktop (>= 1200px)
    Remove black background and return to white style.css defaults
    ========================================================================== */
-@media screen and (min-width: 1153px) {
+@media screen and (min-width: 1200px) {
   body {
     background: var(--color-bg);
     margin: 0;

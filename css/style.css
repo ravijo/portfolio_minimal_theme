@@ -8,6 +8,8 @@
   --color-primary-dark: #18BC9C;
   --color-secondary: #f07a5c;
   --color-secondary-light: #f1a693;
+  --color-accent-green: #BAF5D9;
+  --color-accent-blue: #283A4D;
 
   /* Colors - Text */
   --color-text: #333;
@@ -22,31 +24,59 @@
   --color-bg-gray: #EAEAEA;
   --color-bg-light-gray: #f7f7f7;
 
-  /* Colors - Accents */
-  --color-accent-green: #BAF5D9;
-  --color-accent-blue: #283A4D;
-
   /* Colors - Borders */
   --color-border: #ddd;
   --color-border-light: #ececec;
   --color-border-dark: #bbb;
 
-  /* Colors - UI States */
-  --color-success: #12AB8D;
-  --color-success-hover: #089177;
-  --color-error: #EC7F58;
-  --color-warning: #ED5;
-
-  /* Additional UI Colors */
+  /* Colors - Navigation, Menus */
   --color-menu-bg: #1F2F41;
   --color-menu-border: #383838;
   --color-menu-text: #eee;
   --color-user-menu-border: #636363;
+  --color-dropdown-bg: #282828;
+
+  /* Colors - Tables */
+  --color-table-header: #2E3D4A;
+  --color-table-hover: #dbdbdb;
+
+  /* Colors - Code, Pre */
+  --color-code-bg: #fafafa;
+  --color-pre-bg: #d8d8d8;
+
+  /* Colors - Quotes, Highlights */
+  --color-quote-bg: #faf7f7;
+  --color-highlight: #fdfc9b;
+
+  /* Colors - Forms */
+  --color-fieldset-border: #ccc;
+
+  /* Colors - Comments, Tags, Links */
   --color-comment-bg: #F9F9F9;
   --color-tag-bg: #5183AF;
   --color-active-link: #6CDCFF;
-  --color-dropdown-bg: #282828;
-  --color-fieldset-border: #ccc;
+
+  /* Colors - Buttons */
+  --color-read-more: #00AC00;
+  --color-read-more-hover: green;
+
+  /* Colors - Pagination */
+  --color-pager-separator: #888;
+  --color-pager-current: #cfcfcf;
+
+  /* Colors - Social Media */
+  --color-social-icon: #777;
+  --color-social-bg: #E7E7E7;
+
+  /* Colors - Success, Error, Warning */
+  --color-success: #12AB8D;
+  --color-success-hover: #089177;
+  --color-success-bg: #F8FFF0;
+  --color-success-border: #BE7;
+  --color-error: #EC7F58;
+  --color-error-bg: #FEF5F1;
+  --color-warning: #ED5;
+  --color-warning-bg: #FFFCE5;
 
   /* Spacing Scale */
   --space-xs: 0.25rem;    /* 4px */
@@ -75,9 +105,9 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 3px 3px 0 #D1D1D1;
+  --shadow-header: 0 6px 0 #E4E4E4;
 
-  /* Responsive Design Variables */
-  /* Mobile defaults (< 768px) */
+  /* Responsive Design Variables - Mobile defaults (< 768px) */
   --header-padding: 80px;
   --logo-max-width: 75%;
   --title-font-size: 28px;
@@ -221,7 +251,7 @@ th, tr, td {
 }
 
 th {
-  background: #2E3D4A;
+  background: var(--color-table-header);
   border-right: 1px solid #c8c7c7;
   color: var(--color-text-inverse);
   padding: 10px;
@@ -234,7 +264,7 @@ td {
   color: inherit;
   text-align: center;
   padding: 10px;
-  border: 1px solid #DBDBDB;
+  border: 1px solid var(--color-table-hover);
 }
 
 .sticky-header th, .sticky-table th {
@@ -254,7 +284,7 @@ em, cite {
 }
 
 mark {
-  background-color: #fdfc9b;
+  background-color: var(--color-highlight);
   font-style: italic;
   font-weight: 700;
 }
@@ -273,7 +303,7 @@ big {
 }
 
 ins {
-  background-color: #fdfc9b;
+  background-color: var(--color-highlight);
   text-decoration: none;
 }
 
@@ -295,7 +325,7 @@ sup, sub {
 
 /* Code and pre */
 code {
-  background: #fafafa;
+  background: var(--color-code-bg);
   text-shadow: 1px 1px var(--color-bg);
   border: 1px solid var(--color-border-dark);
   display: block;
@@ -305,7 +335,7 @@ code {
 }
 
 pre {
-  background: #d8d8d8;
+  background: var(--color-pre-bg);
   text-shadow: 1px 1px var(--color-bg);
   border: 1px solid var(--color-border-dark);
   padding: 7px;
@@ -317,7 +347,7 @@ pre {
 blockquote, q {
   quotes: none;
   border: 1px solid #e2dcdc;
-  background: #faf7f7 url(../images/quote.png) no-repeat;
+  background: var(--color-quote-bg) url(../images/quote.png) no-repeat;
   padding: 10px 5px 5px 47px;
   text-shadow: 1px 1px var(--color-bg);
   margin: 5px 0;
@@ -457,7 +487,7 @@ header.siteheader {
   text-align: center;
   padding: 150px 0;
   font-size: 26px;
-  box-shadow: 0 6px 0 #E4E4E4;
+  box-shadow: var(--shadow-header);
 }
 
 h1#site-title {
@@ -733,7 +763,7 @@ fieldset.collapsed {
 }
 
 fieldset legend {
-  background: #dbdbdb;
+  background: var(--color-table-hover);
   border: 1px solid var(--color-fieldset-border);
   border-bottom: none;
   display: block;
@@ -897,7 +927,7 @@ ul.primary li a:hover, ul.primary li a.active {
 }
 
 ul.primary li a:hover {
-  background: #888;
+  background: var(--color-pager-separator);
   text-decoration: none;
 }
 
@@ -923,7 +953,7 @@ ul.secondary li a, ul.secondary li a:link {
 }
 
 ul.secondary li a:hover, ul.secondary li a.active {
-  background: #888;
+  background: var(--color-pager-separator);
   color: var(--color-text-inverse);
   text-decoration: none;
 }
@@ -934,7 +964,7 @@ ul.secondary a.active {
 
 /* Pager */
 .item-list .pager li {
-  background: #cfcfcf;
+  background: var(--color-pager-current);
   border-radius: var(--radius-sm);
   margin-right: 4px;
   text-shadow: 1px 1px var(--color-bg);
@@ -1010,7 +1040,7 @@ ul.secondary a.active {
 #footer .column li {
   display: block;
   border-bottom: 1px solid silver;
-  box-shadow: 0 1px 0 #FAFAFA;
+  box-shadow: 0 1px 0 var(--color-code-bg);
 }
 
 #footer .column li a {
@@ -1053,9 +1083,9 @@ ul.secondary a.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #777;
+  color: var(--color-social-icon);
   overflow: hidden;
-  background: #E7E7E7;
+  background: var(--color-social-bg);
   border-radius: var(--radius-full);
 }
 
@@ -1073,7 +1103,7 @@ ul.secondary a.active {
 
 .page-blog article footer {
   padding: 10px 15px;
-  border: 1px solid #E7E7E7;
+  border: 1px solid var(--color-social-bg);
 }
 
 /* Comments */
@@ -1271,7 +1301,7 @@ ul.secondary a.active {
 }
 
 a.read_more {
-  background: #00AC00;
+  background: var(--color-read-more);
   padding: 5px 9px;
   text-decoration: none;
   margin: 10px 0;
@@ -1279,7 +1309,7 @@ a.read_more {
 }
 
 a.read_more:hover {
-  background: green;
+  background: var(--color-read-more-hover);
 }
 
 /* Article styling */
@@ -1306,19 +1336,19 @@ article, .not-front .node-page, .not-front.node-type-blog .node-blog, .not-front
 
 /* System messages */
 div.error, div.status, div.warning {
-  background: #FEF5F1;
+  background: var(--color-error-bg);
   border-radius: var(--radius-sm);
   border-color: var(--color-error);
   padding: 15px var(--space-xl);
 }
 
 div.status {
-  background: #F8FFF0;
-  border-color: #BE7;
+  background: var(--color-success-bg);
+  border-color: var(--color-success-border);
 }
 
 div.warning {
-  background-color: #FFFCE5;
+  background-color: var(--color-warning-bg);
   border-color: var(--color-warning);
 }
 

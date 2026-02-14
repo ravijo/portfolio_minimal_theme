@@ -63,7 +63,7 @@ td,
 }
 
 /* Front page blocks */
-.front-blocks > .region > .block {
+.front-blocks>.region>.block {
   margin: var(--block-margin, 10px) auto;
 }
 
@@ -84,7 +84,7 @@ td,
 }
 
 /* Footer - mobile override */
-#copyright > div {
+#copyright>div {
   margin: 10px 0;
 }
 
@@ -94,7 +94,7 @@ td,
 }
 
 /* Front blocks */
-.frontblockwrap > .region > .block {
+.frontblockwrap>.region>.block {
   margin: var(--block-region-margin, 30px) auto;
 }
 
@@ -155,11 +155,11 @@ select {
   }
 
   /* Tablet-specific block styles */
-  .front-blocks > .region {
+  .front-blocks>.region {
     padding: 10px;
   }
 
-  .front-blocks > .region > .block {
+  .front-blocks>.region>.block {
     font-size: 15px;
   }
 
@@ -183,7 +183,7 @@ select {
     padding: 10px;
   }
 
-  .frontuniqueblocks2 > .block {
+  .frontuniqueblocks2>.block {
     padding: 0;
   }
 
@@ -203,7 +203,7 @@ select {
   }
 
   /* Reset #copyright > div margin back to style.css default */
-  #copyright > div {
+  #copyright>div {
     margin: var(--space-xl) 0;
   }
 
@@ -211,7 +211,7 @@ select {
     padding-right: 0;
   }
 
-  .frontblockwrap > .region {
+  .frontblockwrap>.region {
     padding: 0;
   }
 
@@ -242,11 +242,11 @@ select {
     box-shadow: var(--shadow-header);
   }
 
-  .front-blocks > .region {
+  .front-blocks>.region {
     padding: 0;
   }
 
-  .front-blocks > .region > .block {
+  .front-blocks>.region>.block {
     font-size: 16px;
   }
 

@@ -246,7 +246,7 @@ select {
   }
 
   header.siteheader {
-    box-shadow: 0 6px 0 #E4E4E4;
+    box-shadow: var(--shadow-header);
   }
 
   .front-blocks > .region {

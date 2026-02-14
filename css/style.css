@@ -37,6 +37,17 @@
   --color-error: #EC7F58;
   --color-warning: #ED5;
 
+  /* Additional UI Colors */
+  --color-menu-bg: #1F2F41;
+  --color-menu-border: #383838;
+  --color-menu-text: #eee;
+  --color-user-menu-border: #636363;
+  --color-comment-bg: #F9F9F9;
+  --color-tag-bg: #5183AF;
+  --color-active-link: #6CDCFF;
+  --color-dropdown-bg: #282828;
+  --color-fieldset-border: #ccc;
+
   /* Spacing Scale */
   --space-xs: 0.25rem;    /* 4px */
   --space-sm: 0.5rem;     /* 8px */
@@ -64,6 +75,19 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 3px 3px 0 #D1D1D1;
+
+  /* Responsive Design Variables */
+  /* Mobile defaults (< 768px) */
+  --header-padding: 80px;
+  --logo-max-width: 75%;
+  --title-font-size: 28px;
+  --description-font-size: 16px;
+  --social-icon-size: 30px;
+  --social-icon-font: 15px;
+  --social-icon-margin: 20px;
+  --content-min-height: 400px;
+  --block-margin: 10px;
+  --block-region-margin: 30px;
 }
 
 /* Modern CSS Reset */
@@ -214,7 +238,7 @@ td {
 }
 
 .sticky-header th, .sticky-table th {
-  border-bottom: 3px solid #ccc;
+  border-bottom: 3px solid var(--color-fieldset-border);
   padding-right: 1em;
   text-align: left;
 }
@@ -308,7 +332,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 /* Horizontal rule */
 hr {
   border: none;
-  border-top: #EEE 1px solid;
+  border-top: var(--color-menu-text) 1px solid;
 }
 
 /* Definition lists */
@@ -501,7 +525,7 @@ h1#site-title a:hover {
   right: 0;
   display: none;
   width: 50px;
-  background: #282828;
+  background: var(--color-dropdown-bg);
   height: 50px;
 }
 
@@ -517,7 +541,7 @@ h1#site-title a:hover {
 
 .user-menu-wrapper {
   width: 100%;
-  background: #1F2F41;
+  background: var(--color-menu-bg);
   overflow: hidden;
 }
 
@@ -530,7 +554,7 @@ h1#site-title a:hover {
 .user-menu-wrapper ul.menu li {
   margin: 0;
   padding: 0;
-  border-color: #383838;
+  border-color: var(--color-menu-border);
   float: left;
   background: none;
 }
@@ -538,7 +562,7 @@ h1#site-title a:hover {
 .user-menu-wrapper ul.menu li a {
   display: block;
   padding: 5px 13px;
-  color: #eee;
+  color: var(--color-menu-text);
   font-size: 12px;
 }
 
@@ -554,7 +578,7 @@ h1#site-title a:hover {
   display: inline-block;
   background: none;
   padding: 0 10px;
-  border-right: 1px solid #636363;
+  border-right: 1px solid var(--color-user-menu-border);
   line-height: 100%;
 }
 
@@ -573,7 +597,7 @@ h1#site-title a:hover {
 }
 
 .top_right ul.menu li a.active {
-  color: #6CDCFF;
+  color: var(--color-active-link);
 }
 
 /* Breadcrumbs */
@@ -627,7 +651,7 @@ aside #user-login-form input.form-text {
   background: var(--color-bg-light-gray);
   border: 1px solid var(--color-border-light);
   clear: both;
-  color: #383838;
+  color: var(--color-menu-border);
   display: inline-block;
   margin-bottom: 5px;
   padding: 2px 8px;
@@ -676,7 +700,7 @@ ul.links {
 
 .field-name-field-tag .field-item a {
   display: block;
-  background: #5183AF;
+  background: var(--color-tag-bg);
   color: var(--color-text-inverse);
   padding: 4px 8px;
   margin: 2px;
@@ -686,7 +710,7 @@ ul.links {
 /* Forms */
 fieldset {
   background: var(--color-bg);
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-fieldset-border);
   margin-top: 10px;
   margin-bottom: 32px;
   padding: 0 0 10px;
@@ -710,7 +734,7 @@ fieldset.collapsed {
 
 fieldset legend {
   background: #dbdbdb;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-fieldset-border);
   border-bottom: none;
   display: block;
   height: 2em;
@@ -771,7 +795,7 @@ input {
 }
 
 input.form-text, textarea.form-textarea, select.form-select {
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-fieldset-border);
 }
 
 .form-item, .form-actions {
@@ -891,7 +915,7 @@ ul.secondary li {
 
 ul.secondary li a, ul.secondary li a:link {
   border: none;
-  color: #ccc;
+  color: var(--color-fieldset-border);
   display: block;
   float: left;
   line-height: 1.5385em;
@@ -1054,7 +1078,7 @@ ul.secondary a.active {
 
 /* Comments */
 .comment {
-  background: #F9F9F9;
+  background: var(--color-comment-bg);
   padding: var(--space-xl);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-lg);
@@ -1469,7 +1493,7 @@ div.warning {
 
 #contact-message-contact-me-form input,
 #contact-message-contact-me-form textarea {
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-fieldset-border);
 }
 
 .comment-submitted article {

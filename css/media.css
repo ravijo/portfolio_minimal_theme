@@ -1,16 +1,14 @@
 /* ==========================================================================
    Mobile-First Media Queries
    Breakpoints:
-   - Base: Mobile (< 768px) - includes black background
-   - Tablet: >= 768px - maintains black background
-   - Desktop: >= 992px - maintains black background
-   - Large Desktop: >= 1200px - removes black background (back to white)
+   - Base: Mobile (< 768px)
+   - Tablet: >= 768px
+   - Desktop: >= 992px
+   - Large Desktop: >= 1200px
    ========================================================================== */
 
 /* ==========================================================================
    Base Styles (Mobile - < 768px)
-   These styles apply to mobile devices and override style.css defaults
-   Includes the black background that should be on mobile/tablet/desktop
    ========================================================================== */
 
 /* Black background and margin - applied to all sizes up to 1199px */
@@ -39,23 +37,23 @@ body {
   margin: 10px 0;
 }
 
-/* Header adjustments */
+/* Header adjustments using CSS variables */
 header.siteheader {
-  padding: 80px 0;
+  padding: var(--header-padding, 80px) 0;
 }
 
 #logo img,
 .region-aboutme img {
-  max-width: 75%;
+  max-width: var(--logo-max-width, 75%);
 }
 
 h1#site-title a {
-  font-size: 28px;
+  font-size: var(--title-font-size, 28px);
   margin: 8px 0;
 }
 
 #site-description {
-  font-size: 16px;
+  font-size: var(--description-font-size, 16px);
   margin: 0;
 }
 
@@ -67,17 +65,9 @@ td,
   font-size: 70%;
 }
 
-td {
-  padding: 0;
-}
-
 /* Front page blocks */
 .front-blocks > .region > .block {
-  margin: 10px auto;
-}
-
-.frontuniqueblocks2 > .block {
-  padding: 10px;
+  margin: var(--block-margin, 10px) auto;
 }
 
 /* Layout adjustments */
@@ -85,27 +75,15 @@ td {
   width: 100%;
 }
 
-/* Flexbox to column layout */
-.project-list,
-.award-list {
-  flex-direction: column;
-  align-items: center;
-}
-
-.project-item,
-.award-item {
-  width: 100%;
-}
-
-/* Social media - mobile sizing */
+/* Social media using CSS variables */
 .social-icons li a {
-  width: 30px;
-  height: 30px;
-  font-size: 15px;
+  width: var(--social-icon-size, 30px);
+  height: var(--social-icon-size, 30px);
+  font-size: var(--social-icon-font, 15px);
 }
 
 .social-media-wrap {
-  margin: 20px 0;
+  margin: var(--social-icon-margin, 20px) 0;
 }
 
 /* Footer - mobile override */
@@ -114,25 +92,13 @@ td {
 }
 
 /* Content containers */
-article,
-.not-front .node-page,
-.not-front.node-type-blog .node-blog,
-.not-front.node-type-article .node-article {
-  padding: 10px;
-}
-
-/* Publications */
 .menu-publications {
   padding-right: 5%;
 }
 
 /* Front blocks */
-.frontblockwrap > .region {
-  padding: 10px;
-}
-
 .frontblockwrap > .region > .block {
-  margin: 30px auto;
+  margin: var(--block-region-margin, 30px) auto;
 }
 
 /* News */
@@ -154,41 +120,42 @@ select {
   box-sizing: border-box;
 }
 
-/* Ensure content area has minimum height to prevent footer shrinkage */
+/* Content wrapper */
 .content-wrap {
-  min-height: 400px;
+  min-height: var(--content-min-height, 400px);
 }
 
 /* ==========================================================================
    Tablet and Above (>= 768px)
-   Reset mobile-specific overrides while keeping black background
    ========================================================================== */
 @media screen and (min-width: 768px) {
-  /* Reset body font size and line-height from mobile */
+  :root {
+    --header-padding: 150px;
+    --logo-max-width: 300px;
+    --title-font-size: 42px;
+    --description-font-size: 23px;
+    --social-icon-size: 55px;
+    --social-icon-font: 27px;
+    --social-icon-margin: 50px;
+    --content-min-height: 500px;
+    --block-margin: 0;
+    --block-region-margin: 100px;
+  }
+
   body {
     line-height: 150%;
     font-size: 15px;
-    /* background and margin stay from base styles */
   }
 
-  /* Reset header styles back to desktop defaults */
   header.siteheader {
     box-shadow: none;
-    padding: 150px 0;
-  }
-
-  #logo img,
-  .region-aboutme img {
-    max-width: 300px;
   }
 
   h1#site-title a {
-    font-size: 42px;
     margin: 10px 0;
   }
 
   #site-description {
-    font-size: 23px;
     margin: 0;
   }
 
@@ -199,12 +166,10 @@ select {
 
   .front-blocks > .region > .block {
     font-size: 15px;
-    margin: 0 auto;
   }
 
   .content-wrap {
     padding-top: 10px;
-    min-height: 500px;  /* Increase min-height for larger screens */
   }
 
   /* Reset mobile styles back to desktop defaults */
@@ -242,27 +207,9 @@ select {
     width: auto;
   }
 
-  /* Social media - reset to desktop sizing */
-  .social-icons li a {
-    width: 55px;
-    height: 55px;
-    font-size: 27px;
-  }
-
-  .social-media-wrap {
-    margin: 50px 0;
-  }
-
   /* Reset #copyright > div margin back to style.css default */
   #copyright > div {
     margin: var(--space-xl) 0;
-  }
-
-  article,
-  .not-front .node-page,
-  .not-front.node-type-blog .node-blog,
-  .not-front.node-type-article .node-article {
-    padding: 0 var(--space-xl);
   }
 
   .menu-publications {
@@ -271,10 +218,6 @@ select {
 
   .frontblockwrap > .region {
     padding: 0;
-  }
-
-  .frontblockwrap > .region > .block {
-    margin: 100px auto;
   }
 
   .recent-news-home .wrapper-class ul {
@@ -296,15 +239,16 @@ select {
 
 /* ==========================================================================
    Desktop (>= 992px)
-   Add desktop-specific styles while keeping black background
    ========================================================================== */
 @media screen and (min-width: 992px) {
-  /* Restore header box-shadow for desktop */
+  :root {
+    --content-min-height: 600px;
+  }
+
   header.siteheader {
     box-shadow: 0 6px 0 #E4E4E4;
   }
 
-  /* Reset tablet padding overrides */
   .front-blocks > .region {
     padding: 0;
   }
@@ -315,13 +259,11 @@ select {
 
   .content-wrap {
     padding-top: var(--space-xl);
-    min-height: 600px;  /* Further increase for desktop */
   }
 }
 
 /* ==========================================================================
    Large Desktop (>= 1200px)
-   Remove black background and return to white style.css defaults
    ========================================================================== */
 @media screen and (min-width: 1200px) {
   body {

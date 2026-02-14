@@ -1,5 +1,5 @@
 /*
-   Mobile-First Media Queries
+Mobile-First Media Queries
    Breakpoints:
    - Base: Mobile (< 641px)
    - Tablet: >= 641px
@@ -8,7 +8,7 @@
 */
 
 /* Base Styles (Mobile - < 641px) */
-/* Black background and margin - applied to all sizes up to 1199px */
+/* Black background and margin - applied to all sizes up to 1152px */
 body {
   background: var(--color-bg-dark);
   margin: 15px;
@@ -55,11 +55,12 @@ h1#site-title a {
 }
 
 /* Table and content blocks */
-td,
-.publications,
-.project-list,
-.award-list {
+td, .publications, .project-list, .award-list {
   font-size: 70%;
+}
+
+td {
+  padding: 0;
 }
 
 /* Front page blocks */
@@ -67,8 +68,22 @@ td,
   margin: var(--block-margin, 10px) auto;
 }
 
+.frontuniqueblocks2>.block {
+  padding: 10px;
+}
+
 /* Layout adjustments */
 .portfolio-list {
+  width: 100%;
+}
+
+/* Flexbox to column layout for mobile */
+.project-list, .award-list {
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-item, .award-item {
   width: 100%;
 }
 
@@ -89,11 +104,20 @@ td,
 }
 
 /* Content containers */
+article, .not-front .node-page, .not-front.node-type-blog .node-blog, .not-front.node-type-article .node-article {
+  padding: 10px;
+}
+
+/* Publications */
 .menu-publications {
   padding-right: 5%;
 }
 
 /* Front blocks */
+.frontblockwrap>.region {
+  padding: 10px;
+}
+
 .frontblockwrap>.region>.block {
   margin: var(--block-region-margin, 30px) auto;
 }
@@ -172,10 +196,7 @@ select {
     margin: 0 0 var(--space-xl) 0;
   }
 
-  td,
-  .publications,
-  .project-list,
-  .award-list {
+  td, .publications, .project-list, .award-list {
     font-size: 16px;
   }
 
@@ -191,8 +212,8 @@ select {
     width: 33%;
   }
 
-  .project-list,
-  .award-list {
+  /* Change to row layout for tablet and above */
+  .project-list, .award-list {
     flex-direction: row;
     align-items: flex-start;
   }
@@ -205,6 +226,10 @@ select {
   /* Reset #copyright > div margin back to style.css default */
   #copyright>div {
     margin: var(--space-xl) 0;
+  }
+
+  article, .not-front .node-page, .not-front.node-type-blog .node-blog, .not-front.node-type-article .node-article {
+    padding: 0 var(--space-xl);
   }
 
   .menu-publications {

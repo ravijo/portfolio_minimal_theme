@@ -1,13 +1,13 @@
 /*
    Mobile-First Media Queries
    Breakpoints:
-   - Base: Mobile (< 768px)
-   - Tablet: >= 768px
-   - Desktop: >= 992px
-   - Large Desktop: >= 1200px
+   - Base: Mobile (< 641px)
+   - Tablet: >= 641px
+   - Desktop: >= 961px
+   - Large Desktop: >= 1153px
 */
 
-/* Base Styles (Mobile - < 768px) */
+/* Base Styles (Mobile - < 641px) */
 /* Black background and margin - applied to all sizes up to 1199px */
 body {
   background: var(--color-bg-dark);
@@ -122,8 +122,8 @@ select {
   min-height: var(--content-min-height, 400px);
 }
 
-/* Tablet and Above (>= 768px) */
-@media screen and (min-width: 768px) {
+/* Tablet and Above (>= 641px) */
+@media screen and (min-width: 641px) {
   :root {
     --header-padding: 150px;
     --logo-max-width: 300px;
@@ -232,8 +232,8 @@ select {
   }
 }
 
-/* Desktop (>= 992px) */
-@media screen and (min-width: 992px) {
+/* Desktop (>= 961px) */
+@media screen and (min-width: 961px) {
   :root {
     --content-min-height: 600px;
   }
@@ -255,8 +255,8 @@ select {
   }
 }
 
-/* Large Desktop (>= 1200px) */
-@media screen and (min-width: 1200px) {
+/* Large Desktop (>= 1153px) */
+@media screen and (min-width: 1153px) {
   body {
     background: var(--color-bg);
     margin: 0;

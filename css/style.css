@@ -121,9 +121,7 @@
 }
 
 /* Modern CSS Reset */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -1372,15 +1370,12 @@ div.warning {
 }
 
 /* Custom Styles */
-.portfolio,
-.awards,
-.projects {
+.portfolio, .awards, .projects {
   overflow: hidden;
   margin-bottom: var(--space-xl);
 }
 
-.projects,
-.awards {
+.projects, .awards {
   background: inherit;
   border: 0;
 }
@@ -1396,30 +1391,25 @@ div.warning {
 }
 
 /* Combined image styles */
-.portfolio-list img,
-.project-list img {
-  max-width: 100%;
+.portfolio-list img, .project-list img {
+  max-width: 98%;
   border: 2px solid;
   transition: opacity var(--transition-slow);
 }
 
 /* All images with hover effect */
-.portfolio-list img:hover,
-.project-item img:hover,
-.award-item img:hover {
+.portfolio-list img:hover, .project-item img:hover, .award-item img:hover {
   opacity: 0.4;
 }
 
 /* Combined flex container styles */
-.project-list,
-.award-list {
+.project-list, .award-list {
   display: flex;
   justify-content: space-between;
 }
 
 /* Combined flex item styles */
-.project-item,
-.award-item {
+.project-item, .award-item {
   flex: 1;
   text-align: center;
 }
@@ -1430,10 +1420,7 @@ div.warning {
 }
 
 /* Combined margin-bottom styles */
-.padding-bottom,
-.recent-news-home,
-.menu-publications .view-grouping,
-.horizontal-line {
+.padding-bottom, .recent-news-home, .menu-publications .view-grouping, .horizontal-line {
   margin-bottom: 4%;
 }
 
@@ -1449,9 +1436,7 @@ div.warning {
 }
 
 /* Not Front Page Styles */
-.not-front h1#site-title,
-.not-front h1#site-title a,
-.not-front header.siteheader {
+.not-front h1#site-title, .not-front h1#site-title a, .not-front header.siteheader {
   margin: 0;
 }
 
@@ -1517,9 +1502,7 @@ div.warning {
 }
 
 /* Publications Section */
-.menu-publications h2,
-.menu-publications h3,
-.menu-publications .view-grouping-header {
+.menu-publications h2, .menu-publications h3, .menu-publications .view-grouping-header {
   font-weight: 700;
 }
 
@@ -1527,8 +1510,7 @@ div.warning {
   font-size: large;
 }
 
-.menu-publications .view-grouping,
-.horizontal-line {
+.menu-publications .view-grouping, .horizontal-line {
   border-bottom: 2px solid gray;
 }
 
@@ -1545,8 +1527,7 @@ div.warning {
   display: block;
 }
 
-#contact-message-contact-me-form input,
-#contact-message-contact-me-form textarea {
+#contact-message-contact-me-form input, #contact-message-contact-me-form textarea {
   border: 1px solid var(--color-fieldset-border);
 }
 
@@ -1581,8 +1562,7 @@ div.warning {
 }
 
 /* File icons - specific types */
-.file--general,
-.file--application-octet-stream {
+.file--general, .file--application-octet-stream {
   background-image: url(../images/icons/application-octet-stream.png);
 }
 

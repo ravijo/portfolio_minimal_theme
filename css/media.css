@@ -39,8 +39,7 @@ header.siteheader {
   padding: var(--header-padding, 80px) 0;
 }
 
-#logo img,
-.region-aboutme img {
+#logo img, .region-aboutme img {
   max-width: var(--logo-max-width, 75%);
 }
 
@@ -144,6 +143,77 @@ select {
 /* Content wrapper */
 .content-wrap {
   min-height: var(--content-min-height, 400px);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-button {
+  display: block;
+}
+
+/* Mobile menu container */
+#main-menu {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100vh;
+  background: #0c1923;
+  z-index: 9999;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  padding-top: 60px;
+}
+
+/* Show menu when checkbox is checked */
+.mobile-menu-toggle:checked ~ #main-menu {
+  right: 0;
+}
+
+/* Overlay behind menu */
+.mobile-menu-toggle:checked ~ #main-menu::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Reset menu to vertical list */
+#main-menu ul {
+  display: block;
+  width: 100%;
+  background: none;
+}
+
+#main-menu ul li {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: none;
+  text-align: center;
+}
+
+#main-menu ul li a {
+  display: block;
+  padding: 1em 5%;
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  transition: background var(--transition-base);
+}
+
+#main-menu ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Submenu styles */
+#main-menu ul li ul li a {
+  padding-left: 10%;
+  opacity: 0.75;
+  font-size: 0.9em;
 }
 
 /* Tablet and Above (>= 641px) */
@@ -277,6 +347,55 @@ select {
 
   .content-wrap {
     padding-top: var(--space-xl);
+  }
+
+  /* Hide mobile menu button */
+  .mobile-menu-button {
+    display: none;
+  }
+
+  /* Restore desktop menu */
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-bg-dark);
+    z-index: 1;
+  }
+
+  #main-menu {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    background: transparent;
+    overflow-y: visible;
+  }
+
+  #main-menu ul {
+    max-width: var(--container-max);
+    margin: 4px auto 0;
+    display: table;
+    background: url(../images/line_globalnav.png) no-repeat right center;
+    text-align: center;
+  }
+
+  #main-menu ul li {
+    width: 12.5%;
+    padding: 15px;
+    display: table-cell;
+    background: url(../images/line_globalnav.png) no-repeat left center;
+    text-align: center;
+    border-top: none;
+  }
+
+  #main-menu ul li a {
+    padding: 0;
+  }
+
+  #main-menu a {
+    color: var(--color-text-inverse);
   }
 }
 

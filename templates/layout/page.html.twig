@@ -52,12 +52,18 @@
 
 {# Start menu-wrap #}
 <div class="menu-wrap">
-  <div class="full-wrap clearfix">
-    <nav id="main-menu" role="navigation">
-      <div class="menu-navigation-container">{{ page.main_menu }}</div>
-      <div class="clear"></div>
-    </nav>
-  </div>
+  {# Add checkbox and hamburger button #}
+  <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle" />
+  <label for="mobile-menu-toggle" class="mobile-menu-button">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav id="main-menu" role="navigation" class="full-wrap clearfix">
+    <div class="menu-navigation-container">{{ page.main_menu }}</div>
+    <div class="clear"></div>
+  </nav>
 </div>
 {# End menu-wrap #}
 

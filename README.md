@@ -5,32 +5,6 @@ _See [References](#references) for the original Drupal 7 theme._
 
 
 ## Todo
-### QUICK WINS (5-15 mins each)
-- [x] Remove bundled animate.css and use CDN version
-- [x] Remove bundled font-awesome.css and use CDN/Composer
-- [x] Remove bundled wow.min.js and use CDN version
-- [x] Remove Font Awesome font files from theme
-- [x] Fix insecure HTTP Google Fonts import (change to HTTPS)
-- [x] Replace outdated CSS reset with modern version
-- [x] Add defer/async attributes to JavaScript
-- [x] Update FA4 to FA6 class names in templates
-- [x] Update Animate.css class names if used
-- [x] Add screenshots/GIFs to README
-- [x] Update library definitions to use VERSION token
-- [x] Remove deprecated features from .info.yml
-- [x] Add preconnect hints for external resources
-- [x] Add CSS custom properties for colors and spacing
-- [x] Remove all vendor prefixes and add autoprefixer to build process
-- [x] Remove unused CSS (file icons if not needed)
-- [ ] Replace fixed pixel widths with relative units and clamp()
-- [ ] Add prefers-reduced-motion support
-
-### MEDIUM (1-2 hours each)
-- [ ] Remove fixed positioning from navigation (use sticky)
-
-### HARD (2-4 hours each)
-- [x] Convert desktop-first to mobile-first media queries in media.css
-- [ ] Add semantic HTML5 tags throughout templates
 - [ ] Reorganize CSS into modular files (base/layout/components)
 
 

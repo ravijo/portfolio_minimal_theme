@@ -28,18 +28,18 @@
 
       // Add animation classes to specific sections
       $('.frontblockwrap .region .block > div', context).addClass('minimal');
-      $('.region-aboutme .block > div', context).addClass('bounceIn');
-      $('.projects .project-list .project-item', context).addClass('minimal bounceInDown');
-      $('.region-keyskills .publications', context).addClass('bounceInUp');
-      $('.region-education .block > div', context).addClass('bounceIn');
-      $('.region-contact .block > div', context).addClass('bounceInUp');
-      $('#post-content .block, #post-content .content > div', context).addClass('minimal bounceInDown');
+      $('.region-aboutme .block > div', context).addClass('animate__bounceIn');
+      $('.projects .project-list .project-item', context).addClass('minimal animate__bounceInDown');
+      $('.region-keyskills .publications', context).addClass('animate__bounceInUp');
+      $('.region-education .block > div', context).addClass('animate__bounceIn');
+      $('.region-contact .block > div', context).addClass('animate__bounceInUp');
+      $('#post-content .block, #post-content .content > div', context).addClass('minimal animate__bounceInDown');
 
       // Initialize WOW.js (Only once to prevent re-initialization)
       if (typeof WOW !== 'undefined') {
         new WOW({
           boxClass: 'minimal',
-          animateClass: 'animated',
+          animateClass: 'animate__animated',
           offset: 0
         }).init();
       }

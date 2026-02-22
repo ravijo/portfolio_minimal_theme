@@ -9,11 +9,11 @@
  * - file_size: The size of the file.
  *
  * @see template_preprocess_file_link()
+ *
+ * @ingroup themeable
  */
 #}
-<span {{ attributes }}>{{ link }}</span>
-{#
+<span{{ attributes }}>{{ link }}</span>
 {% if file_size %}
   <span>({{ file_size }})</span>
 {% endif %}
-#}

@@ -52,18 +52,24 @@
 
 {# Start menu-wrap #}
 <div class="menu-wrap">
-  <div class="full-wrap clearfix">
-    <nav id="main-menu" role="navigation">
-      <div class="menu-navigation-container">{{ page.main_menu }}</div>
-      <div class="clear"></div>
-    </nav>
-  </div>
+  {# Add checkbox and hamburger button #}
+  <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle" />
+  <label for="mobile-menu-toggle" class="mobile-menu-button">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav id="main-menu" role="navigation" class="full-wrap clearfix">
+    <div class="menu-navigation-container">{{ page.main_menu }}</div>
+    <div class="clear"></div>
+  </nav>
 </div>
 {# End menu-wrap #}
 
 {# Start siteheader #}
 <header class="siteheader" role="banner">
-  <div class="minimal bounce">
+  <div class="minimal animate__bounce">
     {% if logo %}
       <div id="logo">
         <a href="{{ front_page }}" title="{{ 'Home'|t }}"><img alt="Passport size picture of {{ site_name }}" src="{{ logo }}" /></a>
@@ -87,9 +93,9 @@
     <div class="frontblockwrap">{{ page.aboutme }}</div>
     {{ page.recent_news }}
     <div class="frontblockwrap">{{ page.myworks }}</div>
-    <div class="frontblockwrap minimal bounceInUp">{{ page.keyskills }}</div>
+    <div class="frontblockwrap minimal animate__bounceInUp">{{ page.keyskills }}</div>
     <div class="frontblockwrap">{{ page.education }}</div>
-    <div class="frontblockwrap minimal bounceInDown">{{ page.awards }}</div>
+    <div class="frontblockwrap minimal animate__bounceInDown">{{ page.awards }}</div>
   {% endif %}
 </div>
 {# End front-blocks #}
@@ -158,7 +164,7 @@
 {# Start front-blocks #}
 <div class="front-blocks">
   {% if is_front %}
-    <div class="frontblockwrap minimal bounceInUp">{{ page.resume }}</div>
+    <div class="frontblockwrap minimal animate__bounceInUp">{{ page.resume }}</div>
     <div class="frontblockwrap">{{ page.contact }}</div>
   {% endif %}
 </div>
@@ -173,49 +179,49 @@
           <ul>
             {% if rss_url %}
               <li>
-                <a class="rss" href="{{ rss_url }}" target="_blank" rel="me"><i class="fa fa-rss"></i></a>
+                <a class="rss" href="{{ rss_url }}" target="_blank" rel="me"><i class="fa-solid fa-rss"></i></a>
               </li>
             {% endif %}
 
             {% if github_url %}
               <li>
-                <a class="github" href="{{ github_url }}" target="_blank" rel="me"><i class="fa fa-github"></i></a>
+                <a class="github" href="{{ github_url }}" target="_blank" rel="me"><i class="fa-brands fa-github"></i></a>
               </li>
             {% endif %}
 
             {% if twitter_url %}
               <li>
-                <a class="twitter" href="{{ twitter_url }}" target="_blank" rel="me"><i class="fa fa-twitter"></i></a>
+                <a class="twitter" href="{{ twitter_url }}" target="_blank" rel="me"><i class="fa-brands fa-x-twitter"></i></a>
               </li>
             {% endif %}
 
             {% if facebook_url %}
               <li>
-                <a class="fb" href="{{ facebook_url }}" target="_blank" rel="me"><i class="fa fa-facebook"></i></a>
+                <a class="fb" href="{{ facebook_url }}" target="_blank" rel="me"><i class="fa-brands fa-facebook-f"></i></a>
               </li>
             {% endif %}
 
             {% if google_plus_url %}
               <li>
-                <a class="gplus" href="{{ google_plus_url }}" target="_blank" rel="me"><i class="fa fa-google-plus"></i></a>
+                <a class="gplus" href="{{ google_plus_url }}" target="_blank" rel="me"><i class="fa-brands fa-google-plus"></i></a>
               </li>
             {% endif %}
 
             {% if linkedin_url %}
               <li>
-                <a class="linkedin" href="{{ linkedin_url }}" target="_blank" rel="me"><i class="fa fa-linkedin"></i></a>
+                <a class="linkedin" href="{{ linkedin_url }}" target="_blank" rel="me"><i class="fa-brands fa-linkedin-in"></i></a>
               </li>
             {% endif %}
 
             {% if pinterest_url %}
               <li>
-                <a class="pinterest" href="{{ pinterest_url }}" target="_blank" rel="me"><i class="fa fa-pinterest"></i></a>
+                <a class="pinterest" href="{{ pinterest_url }}" target="_blank" rel="me"><i class="fa-brands fa-pinterest"></i></a>
               </li>
             {% endif %}
 
             {% if youtube_url %}
               <li>
-                <a class="youtube" href="{{ youtube_url }}" target="_blank" rel="me"><i class="fa fa-youtube"></i></a>
+                <a class="youtube" href="{{ youtube_url }}" target="_blank" rel="me"><i class="fa-brands fa-youtube"></i></a>
               </li>
             {% endif %}
           </ul>

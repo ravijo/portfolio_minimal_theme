@@ -107,6 +107,14 @@
   --shadow-lg: 3px 3px 0 #D1D1D1;
   --shadow-header: 0 6px 0 #E4E4E4;
 
+  /* Mobile Menu */
+  --mobile-menu-bg: #0c1923;
+  --mobile-menu-width: 280px;
+  --mobile-menu-padding-top: 60px;
+  --mobile-menu-overlay: rgba(0, 0, 0, 0.5);
+  --mobile-menu-item-border: rgba(255, 255, 255, 0.1);
+  --mobile-menu-item-hover: rgba(255, 255, 255, 0.1);
+
   /* Responsive Design Variables - Mobile defaults (< 768px) */
   --header-padding: 80px;
   --logo-max-width: 75%;

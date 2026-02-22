@@ -154,14 +154,14 @@ select {
 #main-menu {
   position: fixed;
   top: 0;
-  right: -280px;
-  width: 280px;
+  right: calc(-1 * var(--mobile-menu-width));
+  width: var(--mobile-menu-width);
   height: 100vh;
-  background: #0c1923;
+  background: var(--mobile-menu-bg);
   z-index: 9999;
   overflow-y: auto;
   transition: right 0.3s ease;
-  padding-top: 60px;
+  padding-top: var(--mobile-menu-padding-top);
 }
 
 /* Show menu when checkbox is checked */
@@ -177,7 +177,7 @@ select {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--mobile-menu-overlay);
   z-index: -1;
 }
 
@@ -192,7 +192,7 @@ select {
   display: block;
   width: 100%;
   padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--mobile-menu-item-border);
   background: none;
   text-align: center;
 }
@@ -206,7 +206,7 @@ select {
 }
 
 #main-menu ul li a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--mobile-menu-item-hover);
 }
 
 /* Submenu styles */
